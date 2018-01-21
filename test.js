@@ -3,7 +3,7 @@ var chai = require('chai');
 var expect = chai.expect;
 var assert = require('assert');
 var app = require('./app.js')
-console.log(app.problem1())
+//console.log(app.problem1())
 
 describe("For loop tests", function () {
   describe("Problem 1", function () {

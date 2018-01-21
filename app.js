@@ -4,81 +4,74 @@ module.exports = {
 }
 // Write a for loop within this function that will create this array: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 function problem1() {
-  var oneToTen = []
-  // start coding here
-
-
-  // done coding here
+  var oneToTen = [];
+  for(let i = 1; i < 11; i++) {
+    oneToTen.push(i);
+  }
   return oneToTen;
 }
 
 // Write a for loop within this function that will create this array: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 function problem2() {
-  var tenToOne = []
-  // start coding here
-
-
-  // done coding here
+  var tenToOne = [];
+  for(let i = 10; i > 0; i--){
+    tenToOne.push(i);
+  }
   return tenToOne;
 }
 
 // Write a for loop within this function that will create this array: [1, 3, 5, 7, 9]
 function problem3() {
-  var oddNumsArray = []
-  // start coding here
-
-
-  // done coding here
+  var oddNumsArray = [];
+  for(let i = 1; i < 10; i += 2) {
+    oddNumsArray.push(i);
+  }
   return oddNumsArray;
 }
 
 // Write a for loop within this function that will create this array: [2, 4, 6, 8, 10]
 function problem4() {
-  var evenNumsArray = []
-  // start coding here
-
-
-  // done coding here
+  var evenNumsArray = [];
+  for(let i = 2; i < 11; i += 2) {
+    evenNumsArray.push(i);
+  }
   return evenNumsArray;
 }
 // Write a for loop within this function that will create this array: [3, 6, 9]
 function problem5() {
-  var threesArray = []
-  // start coding here
-
-
-  // done coding here
+  var threesArray = [];
+  for(let i = 3; i < 10; i += 3) {
+    threesArray.push(i);
+  }
   return threesArray;
 }
 
 // Write a for loop within this function that will add only names that start with "J"
 // to the 'jNamesArray'.
 function problem6(arr) {
-  var jNamesArray = []
-  // start coding here
-
-
-  // done coding here
+  var jNamesArray = [];
+  arr.forEach((element) => {
+    if(element.charAt(0) === "J") jNamesArray.push(element);
+  })
   return jNamesArray;
 }
 
 // Write a for loop that adds all of the values in the array together
 function problem7(arr) {
   var accumulator = 0;
-  // start coding here
-
-
-  // done coding here
+  arr.forEach((element) => {
+    accumulator += element;
+  })
   return accumulator;
 }
 
 // Write a for loop that adds each letter (UPPERCASE) in the alphabet from A to Z into the alphabetArray.
 function problem8() {
   var alphabetArray = [];
-  // start coding here
-
-
-  // done coding here
+  var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  alphabet.split("").forEach((element) => {
+    alphabetArray.push(element);
+  })
   return alphabetArray;
 }
 
