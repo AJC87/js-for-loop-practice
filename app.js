@@ -79,93 +79,85 @@ function problem8() {
 // Write a for loop that adds each letter (UPPERCASE) in the alphabet from Z to A into the alphabetArray.
 function problem9() {
   var alphabetArray = [];
-  // start coding here
-
-
-  // done coding here
+  var alphabet = "ZYXWVUTSRQPONMLKJIHGFEDCBA";
+  alphabet.split("").forEach((element) => {
+    alphabetArray.push(element);
+  })
   return alphabetArray;
 }
 
 
 // Write the logic that will allow the function to return a string containing all of the array elements joined with a space.
 // Example: problem10(['a', 'b', 'c']) ==> 'a b c'
-function problem10() {
-  // start coding here
-
-  return ;
-  // done coding here
+function problem10(arr) {
+  return arr.join(" ");
 }
 
 // Write the logic that will allow the function to return a string containing all of the array elements alternating uppercase and lowercase starting with the first element being uppercase.
 // Example: problem11(['a', 'p', 'p', 'l', 'e']) ==> 'ApPlE'
 function problem11(arr) {
   var staggeredLetters = [];
-  // start coding here
-
-
-  // done coding here
-  return staggeredLetters;
+  arr.forEach((element, index) => {
+    if(index % 2 === 0) staggeredLetters.push(element.toUpperCase());
+    else staggeredLetters.push(element);
+  })
+  return staggeredLetters.join("");
 }
 
 // Write the logic that will allow the function to return a string containing all of the array elements alternating uppercase and lowercase starting with the first element being uppercase.
 function problem12(arr) {
   var staggeredLetters = [];
-  // start coding here
-
-
-  // done coding here
-  return staggeredLetters;
+  var staggeredLetters = [];
+  arr.forEach((element, index) => {
+    if(index % 2 === 0) staggeredLetters.push(element);
+    else staggeredLetters.push(element.toUpperCase());
+  })
+  return staggeredLetters.join("");
 }
 
 // Write the logic that will allow the function to return a an array containing an array of odd elements as index 0 and another array containing even elements.
 function problem13(arr) {
-  var evensAndOdds = [];
-  // start coding here
-
-
-  // done coding here
+  var evensAndOdds = [[],[]];
+  arr.forEach((element) => {
+    if(element % 2 !== 0) evensAndOdds[0].push(element);
+    else evensAndOdds[1].push(element);
+  })
   return evensAndOdds;
 }
 
 // Write the logic that will allow the function to return an array that contains all of the elements from both arrays
 function problem14(arr1, arr2) {
   var combinedArray = [];
-  // start coding here
-
-
-  // done coding here
+  Array.from(arguments).forEach((arr) => {
+    arr.forEach((element) => {
+      combinedArray.push(element);
+    })
+  })
   return combinedArray;
 }
 
 // Write the logic that will allow the function to return an array containing all of the first letters from the words in the string.
 // Example: problem15(['apple', 'orchards']) ==> ['a', 'o']
 function problem15(arr) {
-  var firstLetters = [];
-  // start coding here
-
-
-  // done coding here
-  return firstLetters;
+  return arr.map((element) => {
+    return element.charAt(0);
+  })
 }
 // Write the logic that will allow the function to return an array containing all of the last letters from the words in the string.
 // Example: problem16(['apple', 'orchards']) ==> ['e', 's']
 function problem16(arr) {
-  var lastLetters = [];
-  // start coding here
-
-
-  // done coding here
-  return lastLetters;
+  return arr.map((element) => {
+    return element.charAt(element.length - 1);
+  })
 }
 
 // Write the logic that will allow the function to return index 1 to n multiplied by the number at index 0
 // Example: problem17([2, 1, 2, 3]) ==> [2, 2, 4, 6]
 function problem17(arr) {
   var firstIndexMult = [];
-  // start coding here
-
-
-  // done coding here
+  for(let i = 1; i < arr.length; i++) {
+    firstIndexMult.push(arr[0] * arr[i]);
+  }
   return firstIndexMult;
 }
 
@@ -173,10 +165,9 @@ function problem17(arr) {
 // Example: problem18([2, 2, 4, 6]) ==> [2, 1, 2, 3]
 function problem18(arr) {
   var firstIndexDivision = [];
-  // start coding here
-
-
-  // done coding here
+  for(let i = 1; i < arr.length; i++) {
+    firstIndexDivision.push(arr[i] / arr[0]);
+  }
   return firstIndexDivision;
 }
 
